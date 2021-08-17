@@ -16,3 +16,6 @@ var blues = "I have the blues.";
 var blues = blues.fontcolor("blue"); //this prints blue font contained in the string "blues"
 document.write(blues);
 document.write(3+3); //this prints the result of 3+3
+function myFunction() {
+    alert("You pressed a key inside the input field");
+}
