@@ -9,3 +9,8 @@ function myFunction2() {
     sentence += " a lot from this book!"; //concatenates the text with the rest of the variable for "p" element
     document.getElementById("Concatenate").innerHTML = sentence; //specifies the "p" element to be modified
 }
+
+function addition_Function() {
+    var addition = 2+2;
+    document.getElementById("Math").innerHTML = "2+2 = " + addition;
+}
