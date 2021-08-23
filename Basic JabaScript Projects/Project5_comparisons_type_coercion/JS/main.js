@@ -14,6 +14,9 @@ document.write(10 > 2); //creates a greater than statement that returns true
 console.log(2 + 2 == 5); //creates an equal statement that returns false
 
 document.write(10 == 10); //creates an equal statement that returns true
+
+document.write(10 == 10 && 10 > 9)
+
 X = 82;
 
 Y = 82;
