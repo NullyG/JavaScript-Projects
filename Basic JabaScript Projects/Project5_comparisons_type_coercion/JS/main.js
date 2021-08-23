@@ -5,7 +5,7 @@ function type_Coercion() {
 document.write("10" + 5);
 }
 function big_Number(){
-document.getElementById("Number").innerHTML(3E310);
+document.getElementById("Number").innerHTML = (3E310);
 }
 document.write(10 < 2); //creates a less than statement that returns false
 
