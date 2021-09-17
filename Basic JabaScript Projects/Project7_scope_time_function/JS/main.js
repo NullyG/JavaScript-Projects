@@ -1,10 +1,11 @@
+var X = 10; //Creates a variable called X with a value of 10
+
 function Add_numbers() { //Creates a function called Add_numbers
-    var X = 10; //Creates a variable called X with a value of 10
     document.write(20 + X + "<br>"); // writes the variable to the HTML document
 }
 
 function get_Date() { //Creates a function called get_Date
-    if (new Date().getHours() < 18) { //Establishes a condition to perform an action if the time is less than 18:00
+    if (new Date().gethours() < 18) { //Establishes a condition to perform an action if the time is less than 18:00
         document.getElementById("Greeting").innerHTML = "How are you today?"; //Sets the value of the element "Greeting" to "How are you today?" if the conditional statement is met
     }
 }
@@ -42,3 +43,4 @@ function Time_function() { //Creates a function called Time_function
     }
     document.getElementById("Time_of_day").innerHTML = Reply; //Sets the value of the "Time_of_day" element in the HTML document to Reply
 }
+console.log(errorVar1)
