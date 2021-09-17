@@ -43,4 +43,6 @@ function Time_function() { //Creates a function called Time_function
     }
     document.getElementById("Time_of_day").innerHTML = Reply; //Sets the value of the "Time_of_day" element in the HTML document to Reply
 }
+
+
 console.log(errorVar1)

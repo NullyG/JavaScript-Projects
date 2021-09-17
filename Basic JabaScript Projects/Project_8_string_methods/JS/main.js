@@ -9,7 +9,33 @@ function full_Sentence() {
 }
 
 function slice_Method() {
-    var Sentence = "All work and no play makes Johnny a dull boy.";
-    var Section = Sentence.slice(27,33);
-    document.getElementById("Slice").innerHTML = Section;
+    var Sentence = "All work and no play makes Johnny a dull boy."; //Initializes variable "Sentence"
+    var Section = Sentence.slice(27,33); //Initializes variable "Section"
+    document.getElementById("Slice").innerHTML = Section; //Changes value of "Slice" to var Section
+}
+
+function upper_Case() {
+    let str = "Hello World!"; //Declares let "str"
+    document.getElementById("Upper_Case").innerHTML = str.toUpperCase() // Returns "HELLO WORLD!"
+}
+
+function string_Method() {
+    var X =182;
+    document.getElementById("Numbers_to_string").innerHTML = X.toString();
+}
+
+function precision_Method() {
+    var X = 12938.3012987376112;
+    document.getElementById("Precision").innerHTML = X.toPrecision(10);
+}
+function fixed_Method() {
+var num = 5.56789;
+var n = num.toFixed(2);
+document.getElementById("Fixed").innerHTML = n
+}
+
+function value_Method() {
+    let str = "Hello World!";
+    
+    document.getElementById("Value").innerHTML = str.valueOf() //Returns "Hello World!"
 }
