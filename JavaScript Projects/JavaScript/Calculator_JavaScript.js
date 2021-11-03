@@ -19,7 +19,7 @@ function Input_Digit(digit) {
         Calculator.Display_Value = digit;
         Calculator.Wait_Second_Operand = false;
     }
-    else{
+    else {
         // this overwites Display_Value if the current value is 0
         // otherwise it adds onto it
         Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
@@ -121,5 +121,5 @@ keys.addEventListener('click', (event) => {
     }
 
     Input_Digit(target.value);
-    Update_Display;
+    Update_Display();
 })
