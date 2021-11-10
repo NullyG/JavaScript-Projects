@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+    $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+    </script>
+    </head>
+
+    <body>
+        <div id="slideshow">
+            <div>
+                <img src="Images/img_1.jpg">
+            </div>
+            <div>
+                <img src="Images/img_2.jpg">
+            </div>
+            <div>
+                <img src="Images/img_3.jpg">
+            </div>
+            <div>
+                Pretty cool eh?
+            </div>
+        </div>
+    </body>
+</html>
