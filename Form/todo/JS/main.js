@@ -1,4 +1,4 @@
-var obj = { "name":"John", "age":30, "city":"New York"};
+/* var obj = { "name":"John", "age":30, "city":"New York"};
 var myJSON = JSON.stringify(obj);
 document.getElementById("demo").innerHTML = myJSON;
 
@@ -7,14 +7,14 @@ document.getElementById("demo").innerHTML = myJSON;
 /* document.getElementById("demo").innerHTML = obj_2.firstName; */
 
 // Check browser support
-if (typeof(Storage) !== "undefined") {
+/* if (typeof(Storage) !== "undefined") {
     // Store
     localStorage.setItem("lastname", "Smith");
     // Retrieve
     document.getElementById("result").innerHTML = localStorage.getItem("lastname");
 } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not suppoort Web Storage...";
-}
+} */
 
 /* this function gets the task from input */
 function get_todos() {
@@ -36,12 +36,48 @@ function add() {
 
     var todos = get_todos();
     /*This adds a new task input to a JSON string*/
+    todos.push(task);
     localStorage.setItem('todo', JSON.stringify(todos));
     document.getElementById("task").value = "";
+    show();
 
     return false;
+}
+
+/*this function keeps the tasks permanently displayed on the screen*/
+function show() {
+    /* this sets the task permamently displayed on the screen*/
+    var todos = get_todos();
+
+    /*This sets up each task as an unordered list*/
+    var html = '<ul>';
+    /*This displays a task to the list in the order that it is inputed*/
+    for (var i = 0; i < todos.length; i++) {
+        /*this also displays the task as a list and creates the button with the "x"*/
+        html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
+    };
+    html += '</ul>';
+    /*This displays the task as a list*/
+    document.getElementById('todos').innerHTML = html;
 }
 /*This displays the inputed task when the 'Add Item' button is clicked*/
 document.getElementById('add').addEventListener('click', add);
 /*this will keep the inputs displayed permentaly on the screen*/
-/* SharedWorker(); */
+show();
+
+function remove() {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+    /*this looks in the show() how to display a removed item on the screen */
+    show();
+
+    return false;
+}
+
+/*This tells the browser how to display the todo array after an item has been rmoved */
+var buttons = document.getElementsByClassName('remove');
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', remove);
+};
